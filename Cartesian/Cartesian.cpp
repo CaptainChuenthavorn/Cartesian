@@ -27,6 +27,7 @@ int main() {
 				printf("(%d,%d) , ", p[0][i], p[1][j]);
 			
 		}
+		printf("\n");
 	}
 	printf("}");
 	return 0;
