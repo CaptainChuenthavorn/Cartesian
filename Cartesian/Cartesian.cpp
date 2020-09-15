@@ -20,14 +20,14 @@ int main() {
 			scanf("%d", &p[i][j]);
 		}
 	}
-	printf("AxB = ");
-	for (int i = 0;i < 2;i++) {
-		for (int j = 0;j < n[i];j++) {
-			if (i != 1) {
-				printf("( %d, %d ) , ", p[i][j], p[i + 1][j]);
-			}
+	printf("AxB = { ");
+	for (int i = 0;i < n[0];i++) {
+		for (int j = 0;j < n[1];j++) {
+			
+				printf("(%d,%d) , ", p[0][i], p[1][j]);
+			
 		}
 	}
-
+	printf("}");
 	return 0;
 }
