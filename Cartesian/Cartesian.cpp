@@ -3,18 +3,15 @@
 #include <stdlib.h>
 int main() {
 	int n[2];
+	printf("How many number in set A and set B : ");
 	for (int i = 0;i < 2;i++) {
 		scanf("%d", &n[i]);
 	}
-	int** p; // == int a[จองไว้ว่าเก็บ2เซต][ในเซตที่จองไว้ มีกี่ตัว]
-	p = (int**)malloc(2 * sizeof(p));//ขั้นตอน จองพื้นที่ว่าจะเก็บกี่ตัว[]แรก
-					//ถ้าเปลี่ยนเปน5 ก้เปน[5][]		//ใช้sizeof p เพราะ int**p ||int a[]เราต้องการให้ช่องแรกเป็น2 มันโล่ง
+	int** p; 
+	p = (int**)malloc(2 * sizeof(p));
 	for (int i = 0;i < 2;i++) {
-		//จองพท.ให้n
-//int a[0][n1] 
-//int a[0][n2]
-		p[i] = (int*)malloc(n[i] * sizeof(int));//จอง[][]อันที่สอง
-	}									//อิงมาจากอันข้างบน
+		p[i] = (int*)malloc(n[i] * sizeof(int));
+	}
 	for (int i = 0; i < 2;i++) {
 		for (int j = 0;j < n[i];j++) {
 			scanf("%d", &p[i][j]);
@@ -23,7 +20,6 @@ int main() {
 	printf("AxB = { ");
 	for (int i = 0;i < n[0];i++) {
 		for (int j = 0;j < n[1];j++) {
-			
 				printf("(%d,%d) , ", p[0][i], p[1][j]);
 			
 		}
